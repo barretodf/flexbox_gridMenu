@@ -1,0 +1,107 @@
+:root {
+    /* cor da fonte */
+    --cor-principal: #d1d1d1;
+    /* background */
+    --cor-secundaria: black;
+    /* hover */
+    --cor-terciaria: tan;
+    --cor-fonte_hover: black;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: var(--cor-principal); */
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    background-color: var(--cor-secundaria);
+    padding: 10px;
+    align-items: center;
+}
+
+.ul_container {
+    margin-right: 40px;
+    list-style: none;
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.li_item {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 10px;
+    color: var(--cor-principal);
+}
+
+a:hover {
+    background-color: var(--cor-terciaria);
+    border-radius: 5px;
+    color: var(--cor-fonte_hover);
+    
+    /* padding: 15px; */
+
+}
+
+h2 {
+    font-size: 30px;
+    margin-left: 40px;
+    color: var(--cor-principal);
+}
+
+@media screen and (max-width:735px) {
+    .menu {
+        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /* sem isso eles fincam alinhados */
+    .ul_container,
+    h2 {
+        display: block;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    a:hover{
+        color: var(--cor-fonte_hover);
+    }
+}
+
+/* ------------------------------------------ */
+
+
+/* imagens flexbox */
+h1 {
+    text-align: center;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.item {
+    flex: 1 1 200px;
+    padding: 10px;
+}
